@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]  // This allows for alias imports like '@/components/...'
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,             // Allow JavaScript files in the project
+    "skipLibCheck": true,        // Skip type checking for libraries (faster compilation)
+    "strict": false,             // Disable strict type checking (can be set to true for stricter checks)
+    "noEmit": true,              // Don't emit any JavaScript files
+    "incremental": true,         // Enable incremental builds for faster rebuilds
+    "module": "esnext",          // Use ESNext module system
+    "esModuleInterop": true,     // Enable interoperability with CommonJS modules
+    "moduleResolution": "node",  // Resolve modules in Node.js fashion
+    "resolveJsonModule": true,   // Allow importing JSON files
+    "isolatedModules": true,     // Ensure each file can be transpiled in isolation
+    "jsx": "preserve",           // Preserve JSX in output
+    "plugins": [
+      {
+        "name": "next"           // Next.js plugin for improved TypeScript support
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",            // Ensure Next.js types are included
+    ".next/types/**/*.ts",      // Include all Next.js types generated
+    "**/*.ts",                  // Include all TypeScript files
+    "**/*.tsx"                  // Include all TypeScript JSX files (TSX)
+  ],
+  "exclude": [
+    "node_modules"              // Exclude node_modules from type checking
+  ]
+}
